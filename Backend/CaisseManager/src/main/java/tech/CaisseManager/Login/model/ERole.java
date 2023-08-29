@@ -1,4 +1,4 @@
-package com.bezkoder.spring.login.models;
+package tech.CaisseManager.Login.model;
 
 public enum ERole {
     ROLE_Caissier,

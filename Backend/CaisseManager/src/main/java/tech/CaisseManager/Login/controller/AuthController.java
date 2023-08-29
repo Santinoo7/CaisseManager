@@ -21,21 +21,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import tech.CaisseManager.Login.model.ERole;
+import tech.CaisseManager.Login.model.Role;
+import tech.CaisseManager.Login.model.User;
+import tech.CaisseManager.Login.payload.request.LoginRequest;
+import tech.CaisseManager.Login.payload.request.SignupRequest;
+import tech.CaisseManager.Login.payload.response.MessageResponse;
+import tech.CaisseManager.Login.payload.response.UserInfoResponse;
+import tech.CaisseManager.Login.repository.RoleRepository;
+import tech.CaisseManager.Login.repository.UserRepository;
+import tech.CaisseManager.Login.security.jwt.JwtUtils;
+import tech.CaisseManager.Login.security.services.UserDetailsImpl;
 
-import com.bezkoder.spring.login.models.ERole;
-import com.bezkoder.spring.login.models.Role;
-import com.bezkoder.spring.login.models.User;
-import com.bezkoder.spring.login.payload.request.LoginRequest;
-import com.bezkoder.spring.login.payload.request.SignupRequest;
-import com.bezkoder.spring.login.payload.response.UserInfoResponse;
-import com.bezkoder.spring.login.payload.response.MessageResponse;
-import com.bezkoder.spring.login.repository.RoleRepository;
-import com.bezkoder.spring.login.repository.UserRepository;
-import com.bezkoder.spring.login.security.jwt.JwtUtils;
-import com.bezkoder.spring.login.security.services.UserDetailsImpl;
-
-//for Angular Client (withCredentials)
-//@CrossOrigin(origins = "http://localhost:8081", maxAge = 3600, allowCredentials="true")
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
@@ -44,7 +41,7 @@ public class AuthController {
     AuthenticationManager authenticationManager;
 
     @Autowired
-    CaissierRepository caissierRepository;
+    UserRepository userRepository;
 
     @Autowired
     RoleRepository roleRepository;
@@ -97,7 +94,7 @@ public class AuthController {
         Set<Role> roles = new HashSet<>();
 
         if (strRoles == null) {
-            Role userRole = roleRepository.findByName(ERole.ROLE_USER)
+            Role userRole = roleRepository.findByName(ERole.ROLE_Caissier)
                     .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
             roles.add(userRole);
         } else {
@@ -109,14 +106,9 @@ public class AuthController {
                         roles.add(adminRole);
 
                         break;
-                    case "mod":
-                        Role modRole = roleRepository.findByName(ERole.ROLE_MODERATOR)
-                                .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-                        roles.add(modRole);
 
-                        break;
                     default:
-                        Role userRole = roleRepository.findByName(ERole.ROLE_USER)
+                        Role userRole = roleRepository.findByName(ERole.ROLE_Caissier)
                                 .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
                         roles.add(userRole);
                 }

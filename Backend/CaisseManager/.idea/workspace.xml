@@ -6,8 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="695e46f7-16de-46ab-92ed-fac10c2736c9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Controller/CaissierResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Controller/CaissierResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/model/ERole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/model/ERole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/payload/request/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/payload/request/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/payload/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/payload/request/SignupRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/payload/response/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/payload/response/MessageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/payload/response/UserInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/payload/response/UserInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/jwt/AuthEntryPointJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/jwt/AuthTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/jwt/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/services/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/services/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Model/Caissier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Model/Caissier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Repo/CaissierRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Repo/CaissierRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Service/CaissierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Service/CaissierService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,21 +61,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Yassine/Desktop/pfe/sncft/Backend/CaisseManager&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Yassine/Desktop/pfe/sncft/Backend/CaisseManager",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.CaisseManagerApplication">
+    <configuration name="CaisseManagerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spring-boot-login-example" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tech.CaisseManager.CaisseManagerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CaisseManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="CaisseManager" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tech.CaisseManager.CaisseManagerApplication" />
@@ -72,10 +105,21 @@
       <updated>1693275383583</updated>
       <workItem from="1693275387600" duration="179000" />
       <workItem from="1693275621114" duration="3544000" />
+      <workItem from="1693318093723" duration="2456000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.context.ApplicationContextException" package="org.springframework.context" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
