@@ -1,0 +1,29 @@
+<div class="formbold-main-wrapper">
+	<!-- Author: FormBold Team -->
+	<!-- Learn More: https://formbold.com -->
+	<div class="formbold-form-wrapper">
+		<h1>You can add now !</h1>
+
+		<form (ngSubmit)="saveCaissier()" #form="ngForm" >
+            
+			<label for="name">Name: </label>
+			<input
+					name="Name"
+					type="text"
+					required
+					[(ngModel)]="caissier.name">
+					
+					<label for="name">Code: </label>
+					<input
+					type="number" id="code" name="code" class="form-control"
+     
+       #sold="ngModel" [(ngModel)]="caissier.code">
+	 
+	    <button class="formbold-btn" type="submit" [disabled]="!form.valid" >SUBMIT</button>
+		<button class="formbold-btn" type="reset">Cancel</button>
+		<button class ="formbold-btn" value="Go back!"mat-raised-button (click)="goToBack()">return</button>
+		
+	</form>
+	</div>
+  </div>
+  

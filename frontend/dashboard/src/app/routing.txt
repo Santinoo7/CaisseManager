@@ -1,0 +1,3 @@
+etape 1 : Créer un composant
+etape 2 : ajouter le composant au tableau routes dans app-routing.module.Ts
+etape 3 : ajouter le routerLink dans une balise <a> dans SideNav component

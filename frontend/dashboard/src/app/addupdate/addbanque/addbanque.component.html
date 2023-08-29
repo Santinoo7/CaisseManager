@@ -1,0 +1,39 @@
+
+<div class="formbold-main-wrapper">
+	
+	<!-- Author: FormBold Team -->
+	<!-- Learn More: https://formbold.com -->
+	<div class="formbold-form-wrapper">
+		<h1>You can add now !</h1>
+
+		<form (ngSubmit)="saveBanque()" #form="ngForm" >
+            
+			<label for="name">Name: </label>
+			<input name="Name"
+					type="text"
+					required
+					[(ngModel)]="banque.name">
+
+			<label for="name">Compte: </label>
+			<input
+					type="Name" id="compte" name="compte" class="form-control"
+					#compte="ngModel" [(ngModel)]="banque.compte">
+
+			<label for="name">Region: </label>
+			 <input
+					name="Region"
+					type="text"
+					required
+					[(ngModel)]="banque.region">
+
+					
+
+	   
+		<button class ="formbold-btn" type="submit" [disabled]="!form.valid" >SUBMIT</button>
+		<button class="formbold-btn" type="reset">Cancel</button>
+		<button class ="formbold-btn" value="Go back!"mat-raised-button (click)="goToBack()">return</button>
+		
+	</form>
+	</div>
+  </div>
+  

@@ -1,0 +1,43 @@
+<div class="formbold-main-wrapper">
+	<!-- Author: FormBold Team -->
+	<!-- Learn More: https://formbold.com -->
+	<div class="formbold-form-wrapper">
+		<h1>You can add now !</h1>
+
+		<form (ngSubmit)="saveUtilisateur()" #form="ngForm" >
+            <label for="name">Name: </label>
+			<input
+					name="Name"
+					type="text"
+					required
+					[(ngModel)]="utilisateur.name">
+					
+				<label for="name">Email: </label>
+				<input
+					type="Name" id="email" name="email" class="form-control"
+       				#email="ngModel" [(ngModel)]="utilisateur.email">
+					   
+				<label for="name">Role: </label>
+       			<input
+					type="Name" id="role" name="role" class="form-control"
+      				 #role="ngModel" [(ngModel)]="utilisateur.role">
+		
+				 <label for="name">Login: </label>
+       			 <input
+					type="Name" id="login" name="login" class="form-control"
+      				 #login="ngModel" [(ngModel)]="utilisateur.login">
+
+					<label for="name">Password: </label>
+					<input
+					type="Name" id="password" name="password" class="form-control"
+       				#password="ngModel" [(ngModel)]="utilisateur.password">
+       
+
+	    <button class="formbold-btn" type="submit" [disabled]="!form.valid" >SUBMIT</button>
+		<button class="formbold-btn" type="reset">Cancel</button>
+		<button class ="formbold-btn" value="Go back!"mat-raised-button (click)="goToBack()">return</button>
+		
+	</form>
+	</div>
+  </div>
+  
