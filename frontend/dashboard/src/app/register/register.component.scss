@@ -1,0 +1,30 @@
+.centerLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    border-radius: 1rem;
+    width: 24rem;
+    padding: 2rem;
+    padding-left: 1rem;
+    padding-right:1rem;
+ 
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

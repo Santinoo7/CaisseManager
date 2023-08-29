@@ -1,9 +1,8 @@
-<div class="col-md-12">
+<div class="centerLogin">
     <div class="card card-container">
       <img
-        id="profile-img"
-        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-        class="profile-img-card"
+        src="assets/homme.png"
+        width="160"
       />
       <form
         *ngIf="!isSuccessful"
@@ -13,8 +12,11 @@
         novalidate
       >
       <div class="form-group">
+      <mat-form-field>
+
         <label for="username">Username</label>
         <input
+        matInput
           type="text"
           class="form-control"
           name="username"
@@ -25,6 +27,8 @@
           #username="ngModel"
           [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
         />
+      </mat-form-field>
+
         <div class="invalid-feedback" *ngIf="username.errors && f.submitted">
           <div *ngIf="username.errors['required']">Username is required</div>
           <div *ngIf="username.errors['minlength']">
@@ -36,8 +40,12 @@
         </div>
       </div>
       <div class="form-group">
+      <mat-form-field>
+
         <label for="email">Email</label>
         <input
+        matInput
+
           type="email"
           class="form-control"
           name="email"
@@ -47,6 +55,8 @@
           #email="ngModel"
           [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
         />
+      </mat-form-field>
+
         <div class="invalid-feedback" *ngIf="email.errors && f.submitted">
           <div *ngIf="email.errors['required']">Email is required</div>
           <div *ngIf="email.errors['email']">
@@ -55,8 +65,11 @@
         </div>
       </div>
       <div class="form-group">
+        <mat-form-field>
         <label for="password">Password</label>
         <input
+        matInput
+
           type="password"
           class="form-control"
           name="password"
@@ -66,6 +79,7 @@
           #password="ngModel"
           [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
         />
+      </mat-form-field>
         <div class="invalid-feedback" *ngIf="password.errors && f.submitted">
           <div *ngIf="password.errors['required']">Password is required</div>
           <div *ngIf="password.errors['minlength']">
@@ -74,7 +88,7 @@
         </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary btn-block">Sign Up</button>
+        <button mat-raised-button color="primary" class="btn btn-primary btn-block" >Sign Up</button>
       </div>
 
       <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">

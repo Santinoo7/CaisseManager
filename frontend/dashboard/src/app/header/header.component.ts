@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../_services/storage.service';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class HeaderComponent implements OnInit {
-  constructor() { }
+  isLoggedIn: boolean = false;
+  constructor(private readonly storageService: StorageService) { }
 
   ngOnInit(): void {
+    this.isLoggedIn = this.storageService.isLoggedIn();
+    
   }
 
 }

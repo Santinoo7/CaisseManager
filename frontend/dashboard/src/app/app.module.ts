@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { CaissierComponent } from './caissier/caissier.component';
 import { AddcaissierComponent } from './addupdate/addcaissier/addcaissier.component';
 import { UpdatecaissierComponent } from './addupdate/updatecaissier/updatecaissier.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 @NgModule({
@@ -61,7 +65,7 @@ import { UpdatecaissierComponent } from './addupdate/updatecaissier/updatecaissi
     BoardCaissierComponent,
     ProfileComponent,
     AddcaissierComponent,
-    UpdatecaissierComponent,
+    UpdatecaissierComponent
     
     
  
@@ -78,6 +82,9 @@ import { UpdatecaissierComponent } from './addupdate/updatecaissier/updatecaissi
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
     
   ],
   providers: [],
