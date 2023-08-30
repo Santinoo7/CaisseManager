@@ -14,6 +14,7 @@ export class AppComponent {
   title = 'dashboard';
   private roles: string[] = [];
   isLoggedIn = false;
+  isAdmin = false;
   showAdminBoard = false;
   username?: string;
 
@@ -25,25 +26,12 @@ export class AppComponent {
       console.log(this.isLoggedIn);
       const user = this.storageService.getUser();
       this.roles =this.roles;
-
-      this.showAdminBoard = this.roles.includes ('ROLE_ADMIN');
+      this.isAdmin = this.storageService.isUserAdmin()
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.username =user.username;
     } else {
-      
       this.router.navigate(['login']);
-
     }
   }
-  logout(): void {
-    this.authService.logout().subscribe({
-      next:res =>{
-        console.log(res);
-        this.storageService.clean();
-        window.location.reload();
-      },
-      error : err => {
-        console.log(err);
-      }
-    });
-  }
+  
 }

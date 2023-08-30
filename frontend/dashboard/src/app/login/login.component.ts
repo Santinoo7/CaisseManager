@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit{
     password: null
   };
   isLoggedIn = false;
+  isAdmin = false;
   isLoginFailed = false;
   errorMessage = '';
   roles: string[] = [];

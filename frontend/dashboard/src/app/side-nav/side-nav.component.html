@@ -1,37 +1,37 @@
 <div class="nav-items">
-    <a routerLink="dashboard" routerLinkActive="active">
+    <a routerLink="dashboard" routerLinkActive="active" *ngIf="isAdmin">
       <div class="nav-item">
       <fa-icon [icon]=" faBookOpen"></fa-icon>
       <span>Dashboard</span>
     </div>
     </a>
 
-    <a routerLink="gare" routerLinkActive="active">
+    <a routerLink="gare" routerLinkActive="active" *ngIf="isAdmin">
     <div class="nav-item">
       <fa-icon [icon]="faTrain"></fa-icon>
       <span>Gares</span>
     </div>
   </a>
-    <a routerLink="utilisateurs" routerLinkActive="active">
+    <a routerLink="utilisateurs" routerLinkActive="active" *ngIf="isAdmin">
     <div class="nav-item">
       <fa-icon [icon]="faUser"></fa-icon>
       <span>Utilisateurs  </span>
     </div>
   </a>
-    <a routerLink="banque" routerLinkActive="active">
+    <a routerLink="banque" routerLinkActive="active" *ngIf="isAdmin">
     <div class="nav-item">
       <fa-icon [icon]=" faBuildingColumns"></fa-icon>
       <span> Banques</span>
     </div>
   </a>
-    <a routerLink="caisse" routerLinkActive="active">
+    <a routerLink="caisse" routerLinkActive="active" *ngIf="isAdmin">
     <div class="nav-item">
       <fa-icon [icon]="faCashRegister"></fa-icon>
       <span>Caisses</span>
     </div>
   </a>
 
-    <a routerLink="caissier" routerLinkActive="active">
+    <a routerLink="caissier" routerLinkActive="active" >
     <div class="nav-item">
       <fa-icon [icon]="faChartBar"></fa-icon>
       <span>Caissier</span>

@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="695e46f7-16de-46ab-92ed-fac10c2736c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/security/jwt/AuthTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/CaisseManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/CaisseManagerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/model/ERole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/CaisseManager/Login/model/ERole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tech/CaisseManager/Login/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tech/CaisseManager/Login/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tech/CaisseManager/Login/model/ERole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tech/CaisseManager/Login/model/ERole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/dashboard/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/dashboard/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/dashboard/src/app/side-nav/side-nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/dashboard/src/app/side-nav/side-nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/dashboard/src/app/side-nav/side-nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/dashboard/src/app/side-nav/side-nav.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +58,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Yassine/Desktop/pfe/sncft/Backend/CaisseManager",
     "node.js.detected.package.eslint": "true",
@@ -59,6 +68,11 @@
     "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "95194a9e770e95f4a822f162f4baae40",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Spring Boot.CaisseManagerApplication">
@@ -89,6 +103,7 @@
       <workItem from="1693275621114" duration="3544000" />
       <workItem from="1693318093723" duration="2567000" />
       <workItem from="1693335090398" duration="3826000" />
+      <workItem from="1693420177223" duration="3002000" />
     </task>
     <servers />
   </component>

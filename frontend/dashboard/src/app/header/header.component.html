@@ -3,8 +3,7 @@
     <div class="user">
       <div class="user-name">
         <button mat-raised-button *ngIf="!isLoggedIn" [routerLink]="['/login']">Login</button>
-        <button mat-raised-button *ngIf="isLoggedIn">Log out</button>
-
+        <button mat-raised-button *ngIf="isLoggedIn" (click)="logout()">Log out</button>
       </div>
 
     </div>

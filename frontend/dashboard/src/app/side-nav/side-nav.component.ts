@@ -14,6 +14,7 @@ import {
   faTrain,
   faBookOpen
 } from '@fortawesome/free-solid-svg-icons';
+import { StorageService } from '../_services/storage.service';
 
 
 @Component({
@@ -37,14 +38,18 @@ export class SideNavComponent implements OnInit {
   faBuildingColumns= faBuildingColumns;
   faTrain=faTrain;
   faBookOpen= faBookOpen;
+  isAdmin = false;
+  isLoggedIn = false;
 
   
 
-  
-
-  constructor() { }
+  constructor(private storageService:StorageService) { }
 
   ngOnInit(): void {
+    this.isLoggedIn = this.storageService.isLoggedIn();
+    if (this.isLoggedIn){
+      this.isAdmin = this.storageService.isUserAdmin();
+    }
   }
 
 }

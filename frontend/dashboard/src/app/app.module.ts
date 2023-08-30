@@ -38,6 +38,7 @@ import { AddcaissierComponent } from './addupdate/addcaissier/addcaissier.compon
 import { UpdatecaissierComponent } from './addupdate/updatecaissier/updatecaissier.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { httpInterceptorProviders } from './_helpers/auth.interceptor';
 
 
 
@@ -87,7 +88,7 @@ import {MatInputModule} from '@angular/material/input';
     MatInputModule
     
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
