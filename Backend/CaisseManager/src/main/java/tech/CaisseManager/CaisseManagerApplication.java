@@ -23,25 +23,26 @@ import java.util.Set;
 @SpringBootApplication
 public class CaisseManagerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CaisseManagerApplication.class, args);
-	}
-	@Bean
-	public CorsFilter corsFilter() {
-		CorsConfiguration corsConfiguration = new CorsConfiguration();
-		corsConfiguration.setAllowCredentials(true);
-		corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
-		corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
-				"Accept", "Authorization", "Origin, Accept", "X-Requested-With",
-				"Access-Control-Request-Method", "Access-Control-Request-Headers"));
-		corsConfiguration.setExposedHeaders(Arrays.asList("Origin", "Content-Type", "Accept", "Authorization",
-				"Access-Control-Allow-Origin", "Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"));
-		corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-		source.registerCorsConfiguration("/**", corsConfiguration);
-		return new CorsFilter(source);
-	}
+		public static void main(String[] args) {
+			SpringApplication.run(CaisseManagerApplication.class, args);
+		}
 
+			/*@Bean
+			public CorsFilter corsFilter() {
+				CorsConfiguration corsConfiguration = new CorsConfiguration();
+				corsConfiguration.setAllowCredentials(true);
+				corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
+				corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
+						"Accept", "Authorization", "Origin, Accept", "X-Requested-With",
+						"Access-Control-Request-Method", "Access-Control-Request-Headers"));
+				corsConfiguration.setExposedHeaders(Arrays.asList("Origin", "Content-Type", "Accept", "Authorization",
+						"Access-Control-Allow-Origin", "Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"));
+				corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+				UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+				source.registerCorsConfiguration("/**", corsConfiguration);
+				return new CorsFilter(source);
+			}
+*/
 	@Component
 	public class DataBootstrap implements CommandLineRunner {
 
@@ -57,7 +58,7 @@ public class CaisseManagerApplication {
 
 		@Override
 		public void run(String... args) throws Exception {
-
+			if(roleRepository.findAll().isEmpty() && userRepository.findAll().isEmpty()){
 			Role roleAdmin = new Role();
 			roleAdmin.setName(ERole.ROLE_ADMIN);
 			Role roleCaissier = new Role();
@@ -74,8 +75,10 @@ public class CaisseManagerApplication {
 			user.setUsername("superadmin");
 			user.setEmail("admin@admin.com"); //A changer
 			user.setPassword(encoder.encode("123456"));
-			userRepository.save(user);
-		}
+
+
+				userRepository.save(user);
+		}}
 	}
 
 }

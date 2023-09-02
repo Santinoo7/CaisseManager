@@ -21,30 +21,32 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { CaissierComponent } from './caissier/caissier.component';
 import { AddcaissierComponent } from './addupdate/addcaissier/addcaissier.component';
 import { UpdatecaissierComponent } from './addupdate/updatecaissier/updatecaissier.component';
+import { AuthGuardService } from './AuthGuardService';
+import { RoleGuardService } from './RoleGuardService';
 
 const routes: Routes = [
-  {path:"utilisateurs",component:UtilisateursComponent},
-  {path:"gare",component:GaresComponent},
-  {path:"banque",component:BanquesComponent},
-  {path:"caisse",component:CaissesComponent},
-  {path:"dashboard",component:MainComponent},
-  {path:"caissier",component:CaissierComponent},
-  {path:"addgare",component:AddgareComponent},
-  {path:"updategare",component:UpdategareComponent},
-  {path:"addcaisse",component:AddcaisseComponent},
-  {path:"updatecaisse",component:UpdatecaisseComponent},
-  {path:"addbanque",component:AddbanqueComponent},
-  {path:"updatebanque",component:UpdatebanqueComponent},
-  {path:"addutilisateur",component:AddutilisateurComponent},
-  {path:"updateutilisateur",component:UpdateutilisateurComponent},
-  {path:"addcaissier",component:AddcaissierComponent},
-  {path:"updatecaissier",component:UpdatecaissierComponent},
+  {path:"utilisateurs",component:UtilisateursComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"gare",component:GaresComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"banque",component:BanquesComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"caisse",component:CaissesComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"dashboard",component:MainComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"caissier",component:CaissierComponent,canActivate: [AuthGuardService]},
+  {path:"addgare",component:AddgareComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"updategare",component:UpdategareComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"addcaisse",component:AddcaisseComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"updatecaisse",component:UpdatecaisseComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"addbanque",component:AddbanqueComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"updatebanque",component:UpdatebanqueComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"addutilisateur",component:AddutilisateurComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"updateutilisateur",component:UpdateutilisateurComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path:"addcaissier",component:AddcaissierComponent,canActivate: [AuthGuardService]},
+  {path:"updatecaissier",component:UpdatecaissierComponent,canActivate: [AuthGuardService]},
   {path:"login",component:LoginComponent},
   {path:"register",component:RegisterComponent},
   {path:"profile",component:ProfileComponent},
-  {path:"caissier",component:BoardCaissierComponent},
-  {path:"admin",component:BoardAdminComponent},
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+  {path:"caissier",component:BoardCaissierComponent,canActivate: [AuthGuardService]},
+  {path:"admin",component:BoardAdminComponent,canActivate: [AuthGuardService, RoleGuardService]},
+  {path: '', redirectTo: 'dashboard', pathMatch: 'full' }
 
 
 

@@ -27,18 +27,17 @@ body {
 
 .formbold-main-wrapper {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 48px;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  border-radius: 1rem;
+  width: 20rem;
+  padding: 2rem;
 }
 
-.formbold-form-wrapper {
-  margin: 0 auto;
-max-height: 400px;
-  width: 100%;
-  background: white;
-  padding: 40px;
-}
+
 
 .formbold-img {
   margin-bottom: 45px;
@@ -81,12 +80,7 @@ max-height: 400px;
   outline: none;
   resize: none;
 }
-input{  
-  width: 170px;
-}
-label{
-  margin-left: 5px;
-}
+
 .formbold-form-input:focus {
   border-color: #6a64f1;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
@@ -146,7 +140,22 @@ label{
   cursor: pointer;
   margin-top: 25px;
   margin-right: 10px;
+
 }
 .formbold-btn:hover {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 }
+.w-100{
+  width: 100%;
+  margin: 3px 0;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  align-items: center;
+  height: 60vh;
+
+}
+

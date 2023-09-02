@@ -1,5 +1,6 @@
 package tech.CaisseManager.Controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import tech.CaisseManager.Model.Utilisateurs;
 import tech.CaisseManager.Model.Utilisateurs;
 import tech.CaisseManager.Model.Utilisateurs;
@@ -12,8 +13,11 @@ import tech.CaisseManager.Service.UtilisateursService;
 
 import java.util.List;
 
+
 @RestController
+@PreAuthorize("hasRole('ROLE_ADMIN')")
 @RequestMapping("/Utilisateurs")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600,allowCredentials = "true")
 public class UtilisateursResource {
     private final UtilisateursService utilisateursService;
     public UtilisateursResource(UtilisateursService UtilisateursService) {

@@ -1,3 +1,4 @@
+<div class="container">
 <div class="formbold-main-wrapper">
 	<!-- Author: FormBold Team -->
 	<!-- Learn More: https://formbold.com -->
@@ -5,25 +6,33 @@
 		<h1>You can add now !</h1>
 
 		<form (ngSubmit)="saveCaissier()" #form="ngForm" >
-            
-			<label for="name">Name: </label>
+			<mat-form-field>
+				<mat-label>Name</mat-label>
+		
 			<input
+			matInput
 					name="Name"
 					type="text"
 					required
 					[(ngModel)]="caissier.name">
+			</mat-form-field>
 					
-					<label for="name">Code: </label>
+			<mat-form-field>
+				<mat-label>Code</mat-label>
 					<input
+					matInput
 					type="number" id="code" name="code" class="form-control"
      
        #sold="ngModel" [(ngModel)]="caissier.code">
+			</mat-form-field>
+	   
 	 
-	    <button class="formbold-btn" type="submit" [disabled]="!form.valid" >SUBMIT</button>
-		<button class="formbold-btn" type="reset">Cancel</button>
-		<button class ="formbold-btn" value="Go back!"mat-raised-button (click)="goToBack()">return</button>
+	    <button mat-raised-button color="primary" class="btn btn-primary btn-block w-100" type="submit" [disabled]="!form.valid" >SUBMIT</button>
+		<button mat-raised-button color="primary" class="btn btn-primary btn-block w-100" type="reset">Cancel</button>
+		<button mat-raised-button color="primary" class="btn btn-primary btn-block w-100" value="Go back!"mat-raised-button (click)="goToBack()">return</button>
 		
 	</form>
 	</div>
   </div>
+</div>
   

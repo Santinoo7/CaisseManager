@@ -1,5 +1,6 @@
 package tech.CaisseManager.Controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import tech.CaisseManager.Model.Caissier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,8 +9,10 @@ import tech.CaisseManager.Service.CaissierService;
 
 import java.util.List;
 
+@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_CAISSIER')")
 @RestController
 @RequestMapping("/Caissier")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600,allowCredentials = "true")
 public class CaissierResource {
     private final CaissierService caissierService;
 

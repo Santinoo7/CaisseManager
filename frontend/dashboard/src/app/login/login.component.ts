@@ -26,16 +26,21 @@ export class LoginComponent implements OnInit{
        this.roles = this.storageService.getUser().roles;
       }
   }
+
   onSubmit ():void {
     const {username ,password} = this.form ;
     
     this.authService.login (username, password).subscribe({
       next:data => {
+        console.log(data);
+        console.log(data.token);
+        alert(data.token);
         this.storageService.saveUser(data);
         this.isLoginFailed= false; 
         this.isLoggedIn = true ;
         this.roles = this.storageService.getUser().roles;
-        this.reloadPage();
+            this.reloadPage();
+        //this.reloadPage();
       },
       error: err => {
         this.errorMessage = err.error.message;

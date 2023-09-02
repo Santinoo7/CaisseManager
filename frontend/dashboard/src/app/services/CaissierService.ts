@@ -25,7 +25,7 @@ export class CaissierService{
     
     
     public getCaissier(): Observable<Caissier[]>{
-        return this.http.get<Caissier[]>(`${this.apiServerUrl}/Caissier/all`);
+        return this.http.get<Caissier[]>(`${this.apiServerUrl}/Caissier/all`, {withCredentials:true});
     }
     public addCaissier(Caissier ?: Caissier): Observable<Caissier>{
         return this.http.post<Caissier>(`${this.apiServerUrl}/Caissier/add`, Caissier);

@@ -8,6 +8,7 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -16,7 +17,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import tech.CaisseManager.Login.security.jwt.AuthEntryPointJwt;
 import tech.CaisseManager.Login.security.jwt.AuthTokenFilter;
 import tech.CaisseManager.Login.security.services.UserDetailsServiceImpl;
-
 @Configuration
 //@EnableWebSecurity
 @EnableMethodSecurity
@@ -82,10 +82,14 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.ALWAYS))
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers("/api/auth/**").permitAll()
-                                .requestMatchers("/api/test/**").permitAll()
+                                .requestMatchers("/Gares/**").permitAll()
+                                .requestMatchers("/Caissier/**").permitAll()
+                                .requestMatchers("/Caisses/**").permitAll()
+                                .requestMatchers("/Utilisateurs/**").permitAll()
+                                .requestMatchers("/Banques/**").permitAll()
                                 .anyRequest().authenticated()
                 );
 

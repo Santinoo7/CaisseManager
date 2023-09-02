@@ -25,7 +25,7 @@ export class UtilisateurService{
     
     
     public getUtilisateurs(): Observable<Utilisateurs[]>{
-        return this.http.get<Utilisateurs[]>(`${this.apiServerUrl}/Utilisateurs/all`);
+        return this.http.get<Utilisateurs[]>(`${this.apiServerUrl}/Utilisateurs/all`, {withCredentials:true});
     }
     public addUtilisateurs(Utilisateurs ?: Utilisateurs): Observable<Utilisateurs>{
         return this.http.post<Utilisateurs>(`${this.apiServerUrl}/Utilisateurs/add`, Utilisateurs);

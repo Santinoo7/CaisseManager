@@ -1,5 +1,6 @@
 package tech.CaisseManager.Controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import tech.CaisseManager.Model.Caisses;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,7 +10,9 @@ import tech.CaisseManager.Service.CaissesService;
 import java.util.List;
 
 @RestController
+@PreAuthorize("hasRole('ROLE_ADMIN')")
 @RequestMapping("/Caisses")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600,allowCredentials = "true")
 public class CaissesResource {
     private final CaissesService caissesService;
 

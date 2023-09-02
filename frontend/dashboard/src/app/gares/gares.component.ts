@@ -25,6 +25,8 @@ export class GaresComponent implements OnInit{
   constructor(private service: GareService,private router: Router){}
 
   ngOnInit(): void {
+    
+    
     this.service.getGares().subscribe(
      (response: Gares[])=> {
        this.gares = response;

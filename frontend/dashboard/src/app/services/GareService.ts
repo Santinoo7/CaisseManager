@@ -25,10 +25,10 @@ export class GareService{
     
     
     public getGares(): Observable<Gares[]>{
-        return this.http.get<Gares[]>(`${this.apiServerUrl}/Gares/all`);
+        return this.http.get<Gares[]>(`${this.apiServerUrl}/Gares/all`, {withCredentials:true});
     }
     public addGares(Gares ?: Gares): Observable<Gares>{
-        return this.http.post<Gares>(`${this.apiServerUrl}/Gares/add`, Gares);
+        return this.http.post<Gares>(`${this.apiServerUrl}/Gares/add`, Gares,{withCredentials:true});
     }
 
     public updateGares(Gares : Gares): Observable<Gares>{

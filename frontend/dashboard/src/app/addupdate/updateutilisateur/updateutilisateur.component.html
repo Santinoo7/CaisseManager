@@ -1,3 +1,4 @@
+<div class="container">
 <div class="formbold-main-wrapper">
 	<!-- Author: FormBold Team -->
 	<!-- Learn More: https://formbold.com -->
@@ -5,45 +6,59 @@
 		<h1>You can update now !</h1>
 
 		<form (ngSubmit)="saveUtilisateur()" #form="ngForm" >
-            <label for="name">Name: </label>
-
+            
+			<mat-form-field>
+				<mat-label>Name</mat-label>
             <input
+			matInput
 					name="Name"
 					type="text"
 					required
 					[(ngModel)]="utilisateur.name">
+			</mat-form-field>
 
-                    <label for="first-name">Email: </label>
-
+			<mat-form-field>
+				<mat-label>Email</mat-label>>
 					<input
+					matInput
 					type="Name" id="email" name="email" class="form-control"
       
        #email="ngModel" [(ngModel)]="utilisateur.email">
-       <label for="first-name">Role: </label>
+			</mat-form-field>
 
+			<mat-form-field>
+				<mat-label>Role</mat-label>
        <input
+	   matInput
 					type="Name" id="role" name="role" class="form-control"
       
        #role="ngModel" [(ngModel)]="utilisateur.role">
-       <label for="login">Login: </label>
+			</mat-form-field>
 
+       <mat-form-field>
+				<mat-label>Login</mat-label>
        <input
+	   matInput
 					type="Name" id="login" name="login" class="form-control"
       
        #login="ngModel" [(ngModel)]="utilisateur.login">
+	   </mat-form-field>
 
-       <label for="password">Password: </label>
+       <mat-form-field>
+		<mat-label>Password</mat-label>
        <input
+	   matInput
 				type="Name" id="password" name="password" class="form-control"
       
        #password="ngModel" [(ngModel)]="utilisateur.password">
+	   </mat-form-field>
        
 
-	   <button class="formbold-btn" type="submit" [disabled]="!form.valid" >SUBMIT</button>
-		<button class="formbold-btn" type="reset">Cancel</button>
-		<button class ="formbold-btn" value="Go back!"mat-raised-button (click)="goToBack()">return</button>
+	   <button mat-raised-button color="primary" class="btn btn-primary btn-block w-100" type="submit" [disabled]="!form.valid" >SUBMIT</button>
+		<button mat-raised-button color="primary" class="btn btn-primary btn-block w-100" type="reset">Cancel</button>
+		<button mat-raised-button color="primary" class="btn btn-primary btn-block w-100" value="Go back!"mat-raised-button (click)="goToBack()">return</button>
 		
 	</form>
 	</div>
   </div>
-  
+</div>
