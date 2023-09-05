@@ -12,7 +12,9 @@ import {
   faCashRegister,
   faBuildingColumns,
   faTrain,
-  faBookOpen
+  faBookOpen,
+  faFolder,
+  faGear,
 } from '@fortawesome/free-solid-svg-icons';
 import { StorageService } from '../_services/storage.service';
 
@@ -38,6 +40,8 @@ export class SideNavComponent implements OnInit {
   faBuildingColumns= faBuildingColumns;
   faTrain=faTrain;
   faBookOpen= faBookOpen;
+  faFolder=faFolder;
+  faGear =faGear;
   isAdmin = false;
   isLoggedIn = false;
 

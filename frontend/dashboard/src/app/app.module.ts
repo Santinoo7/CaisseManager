@@ -6,11 +6,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { LastFewTransactionsComponent } from './last-few-transactions/last-few-transactions.component';
+
 import { MainComponent } from './main/main.component';
-import { SalesByMonthComponent } from './sales-by-month/sales-by-month.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
-import { TopThreeProductsComponent } from './top-three-products/top-three-products.component';
 import { TopWidgetsComponent } from './top-widgets/top-widgets.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TablePaginationExample } from './table-pagination-example/table-pagination-example.component';
@@ -30,8 +28,6 @@ import { UpdateutilisateurComponent } from './addupdate/updateutilisateur/update
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { BoardAdminComponent } from './board-admin/board-admin.component';
-import { BoardCaissierComponent } from './board-caissier/board-caissier.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CaissierComponent } from './caissier/caissier.component';
 import { AddcaissierComponent } from './addupdate/addcaissier/addcaissier.component';
@@ -39,6 +35,9 @@ import { UpdatecaissierComponent } from './addupdate/updatecaissier/updatecaissi
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { httpInterceptorProviders } from './_helpers/auth.interceptor';
+import { TransactionsComponent } from './transactions/transactions.component';
+import { AddtransactionComponent } from './addupdate/addtransaction/addtransaction.component';
+import { UpdatetransactionComponent } from './addupdate/updatetransaction/updatetransaction.component';
 
 
 
@@ -46,11 +45,8 @@ import { httpInterceptorProviders } from './_helpers/auth.interceptor';
   declarations: [
     AppComponent,
     HeaderComponent,
-    LastFewTransactionsComponent,
     MainComponent,
-    SalesByMonthComponent,
     SideNavComponent,
-    TopThreeProductsComponent,
     TopWidgetsComponent,
     AddgareComponent,
     UpdategareComponent,
@@ -62,11 +58,11 @@ import { httpInterceptorProviders } from './_helpers/auth.interceptor';
     UpdateutilisateurComponent,
     LoginComponent,
     RegisterComponent,
-    BoardAdminComponent,
-    BoardCaissierComponent,
     ProfileComponent,
     AddcaissierComponent,
-    UpdatecaissierComponent
+    UpdatecaissierComponent,
+    AddtransactionComponent,
+    UpdatetransactionComponent
     
     
  

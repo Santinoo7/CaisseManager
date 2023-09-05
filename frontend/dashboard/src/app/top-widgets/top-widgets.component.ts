@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  faLocation,
-  faShop,
-  faBoxes,
-  faMoneyBill,
-} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faBoxes, faLocation, faMoneyBill, faShop } from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 @Component({

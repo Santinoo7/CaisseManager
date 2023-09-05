@@ -28,7 +28,13 @@ export class CaissierService{
         return this.http.get<Caissier[]>(`${this.apiServerUrl}/Caissier/all`, {withCredentials:true});
     }
     public addCaissier(Caissier ?: Caissier): Observable<Caissier>{
-        return this.http.post<Caissier>(`${this.apiServerUrl}/Caissier/add`, Caissier);
+        return this.http.post<Caissier>(`${this.apiServerUrl}/Caissier/add`,
+        {
+            "description":Caissier?.description,
+            "montant":Caissier?.montant,
+            "date":Caissier?.date,
+            "transactions":{"id":Caissier?.transaction.id}
+        });
     }
 
     public updateCaissier(Caissier : Caissier): Observable<Caissier>{

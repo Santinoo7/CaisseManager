@@ -7,6 +7,7 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { Router } from '@angular/router';
 import { PeriodicElement } from '../table-pagination-example/table-pagination-example.component';
+import { MatSort } from '@angular/material/sort';
 
 
 @Component({
@@ -32,6 +33,8 @@ export class GaresComponent implements OnInit{
        this.gares = response;
        console.log(this.gares);
        this.dataSource = new MatTableDataSource<Gares>(this.gares);
+       this.dataSource.paginator = this.paginator;
+       this.dataSource.sort = this.sort;
      },
      (error:HttpErrorResponse)=> {
        alert(error.message);
@@ -39,6 +42,8 @@ export class GaresComponent implements OnInit{
    );
   }
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

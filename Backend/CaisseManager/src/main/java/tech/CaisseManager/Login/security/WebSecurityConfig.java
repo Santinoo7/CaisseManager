@@ -90,6 +90,7 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
                                 .requestMatchers("/Caisses/**").permitAll()
                                 .requestMatchers("/Utilisateurs/**").permitAll()
                                 .requestMatchers("/Banques/**").permitAll()
+                                .requestMatchers("Transactions/**").permitAll()
                                 .anyRequest().authenticated()
                 );
 

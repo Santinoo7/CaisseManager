@@ -1,10 +1,16 @@
+import { Transactions } from "./transaction";
+
 export class Caissier{
     id: number;
-    name: string ;
-    code: string;
-    constructor(id:any,name:any,code:any){
+    description: string ;
+    date: Date;
+    montant: string;
+    transaction: Transactions
+    constructor(id:any,description:any,date:any,transaction:any,montant:any){
         this.id = id;
-        this.name = name;
-        this.code = code;
+        this.description = description;
+        this.date = date;
+        this.montant = montant;
+        this.transaction = transaction;
 }
 }

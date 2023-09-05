@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Caissier } from 'src/app/models/caissier';
+import { Transactions } from 'src/app/models/transaction';
 import { CaissierService } from 'src/app/services/CaissierService';
 
 @Component({
@@ -11,8 +12,10 @@ import { CaissierService } from 'src/app/services/CaissierService';
 export class UpdatecaissierComponent implements OnInit {
   caissier : Caissier ={
     id: 0,
-    name: '',
-    code: ''
+    description: '',
+    montant: '',
+    date: new Date(),
+    transaction: new Transactions("1","name")
   }
   submitted = false;
 

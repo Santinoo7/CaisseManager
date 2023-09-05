@@ -6,6 +6,7 @@ import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { Router } from '@angular/router';
+import { MatSort } from '@angular/material/sort';
 
 
 @Component({
@@ -28,6 +29,8 @@ export class CaissesComponent implements OnInit{
        this.caisses = response;
        console.log(this.caisses);
        this.dataSource = new MatTableDataSource<Caisses>(this.caisses);
+       this.dataSource.paginator = this.paginator;
+       this.dataSource.sort = this.sort;
      },
      (error:HttpErrorResponse)=> {
        alert(error.message);
@@ -35,6 +38,8 @@ export class CaissesComponent implements OnInit{
    );
   }
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

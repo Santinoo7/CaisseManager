@@ -6,6 +6,7 @@ import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { Router } from '@angular/router';
+import { MatSort } from '@angular/material/sort';
 
 
 @Component({
@@ -17,7 +18,7 @@ import { Router } from '@angular/router';
 })
 export class CaissierComponent implements OnInit{
   caissier : Caissier[] = [];
-  displayedColumns: string[] = ['id', 'name','code','actions'];
+  displayedColumns: string[] = ['id', 'description','montant','date','transactions','actions'];
   dataSource?:any;
 
   constructor(private service: CaissierService,private router: Router){}
@@ -28,6 +29,8 @@ export class CaissierComponent implements OnInit{
        this.caissier = response;
        console.log(this.caissier);
        this.dataSource = new MatTableDataSource<Caissier>(this.caissier);
+       this.dataSource.paginator = this.paginator;
+       this.dataSource.sort = this.sort;
      },
      (error:HttpErrorResponse)=> {
        alert(error.message);
@@ -35,6 +38,7 @@ export class CaissierComponent implements OnInit{
    );
   }
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

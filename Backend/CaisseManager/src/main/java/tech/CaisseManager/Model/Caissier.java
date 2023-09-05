@@ -3,6 +3,8 @@ package tech.CaisseManager.Model;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+
 @Entity
 public class Caissier implements Serializable {
     @Id
@@ -10,40 +12,60 @@ public class Caissier implements Serializable {
     @Column(nullable = false, updatable = false)
     private long id ;
 
-    private String name ;
-    private String code ;
+    private String description ;
+    private String montant ;
+private LocalDate date ;
+    @ManyToOne
+    @JoinColumn(name="transactions_id", nullable=false,updatable = false)
+    private Transactions transactions;
 
     public Caissier() {
     }
 
-    public Caissier(long id, String name, String sold) {
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public Transactions getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(Transactions transactions) {
+        this.transactions = transactions;
+    }
+
+    public Caissier(long id, String description, String montant) {
         this.id = id;
-        this.name = name;
-        this.code = code;
+        this.description = description;
+        this.montant = montant;
     }
 
     public long getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public String getSold() {
-        return code;
+    public String getMontant() {
+        return montant;
     }
 
     public void setId(long id) {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public void setSold(String code) {
-        this.code = code;
+    public void setMontant(String montant) {
+        this.montant = montant;
     }
 
 
