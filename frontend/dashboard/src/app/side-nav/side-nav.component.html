@@ -38,4 +38,10 @@
       <span>Transaction</span>
     </div>
   </a>
+  <a routerLink="register" routerLinkActive="active" *ngIf="isAdmin" >
+    <div class="nav-item">
+      <fa-icon [icon]="faPlus"></fa-icon>
+      <span>Ajout Cassier</span>
+    </div>
+  </a>
   </div>

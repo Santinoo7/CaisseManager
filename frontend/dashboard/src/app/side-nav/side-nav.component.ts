@@ -15,6 +15,7 @@ import {
   faBookOpen,
   faFolder,
   faGear,
+  faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import { StorageService } from '../_services/storage.service';
 
@@ -42,8 +43,10 @@ export class SideNavComponent implements OnInit {
   faBookOpen= faBookOpen;
   faFolder=faFolder;
   faGear =faGear;
+  faPlus = faPlus;
   isAdmin = false;
   isLoggedIn = false;
+
 
   
 
